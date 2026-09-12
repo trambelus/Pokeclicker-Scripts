@@ -188,7 +188,7 @@ function initAutoFarm() {
     }
 
     function doReplant() {
-        const berryData = App.game.farming.berryData;
+        const berryData = BerryList;
         // Check each tile
         for (let i = 0; i < 25; i++) {
             let plot = App.game.farming.plotList[i];
