@@ -67,7 +67,7 @@ function initAutoFarm() {
             button.className = 'btn btn-block btn-' + (state ? 'success' : 'danger');
             button.style.height = '50px';
             button.style.fontSize = '9pt';
-            button.textContent = `Auto ${name[0].toUpperCase() + name.slice(1)}\n[${plantState ? 'ON' : 'OFF'}]`;
+            button.textContent = `Auto ${name[0].toUpperCase() + name.slice(1)}\n[${state ? 'ON' : 'OFF'}]`;
             button.onclick = function() { func(); };
 
             buttonDiv.appendChild(button);
