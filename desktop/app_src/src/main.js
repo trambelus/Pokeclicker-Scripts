@@ -928,7 +928,7 @@ function injectDesktopScriptsModifications(gameWindow) {
     runScript(`${__dirname}/scripthandler.js`);
     ensureScriptsDirsExist();
 
-    const repoUrl = 'https://api.github.com/repos/Ephenia/Pokeclicker-Scripts/contents/';
+    const repoUrl = 'https://api.github.com/repos/trambelus/Pokeclicker-Scripts/contents/';
     var repoFiles;
     var localFiles;
     var runningOffline = false;
@@ -960,7 +960,7 @@ function injectDesktopScriptsModifications(gameWindow) {
       .then((data) => {
         repoFiles = repoFiles.concat(data);
         let repoFilenames = repoFiles.map(f => f[0]);
-        logInGameWindow(`Found script files in Ephenia/Pokeclicker-Scripts/ github repository:\n${repoFilenames.join('\n')}`, 'debug');
+        logInGameWindow(`Found script files in trambelus/Pokeclicker-Scripts/ github repository:\n${repoFilenames.join('\n')}`, 'debug');
         let scriptsExecuted = handleScripts(repoFiles);
         disableExtraneousScripts(localFiles, repoFilenames);
         return scriptsExecuted;
